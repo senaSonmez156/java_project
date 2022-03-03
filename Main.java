@@ -1,26 +1,24 @@
-package kdvHesapla;
+package ucgenAlan;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		double tutar, kdvOraný=0.18, kdvOraný2=0.8, kdvliTutar, kdvTutarý;
-		
+		int a,b,c;
 		Scanner input=new Scanner(System.in);
-		System.out.print("Tutarýnýzý giriniz: ");
-		tutar=input.nextDouble();
-		kdvTutarý=(tutar<=0 ? 0:tutar>0 && tutar<1000 ? kdvOraný*tutar : kdvOraný2*tutar);
-		kdvliTutar=tutar+ kdvTutarý;
-		System.out.println(tutar<=0?"Geçersiz sayý ":"Fiþiniz:" );
-		System.out.println("KDV'siz tutar: " + tutar);
-		System.out.println("KDV Tutarý: " + kdvTutarý);
-		System.out.println("KDV'li Tutar: " + kdvliTutar);
+		
+		System.out.print("1.Kenarý giriniz: " );
+		a=input.nextInt();
 		
 		
+		System.out.print("2.Kenarý giriniz: " );
+		b=input.nextInt();
 		
+		System.out.print("3.Kenarý giriniz: " );
+		c=input.nextInt();
 		
-		
-		
+		double cevre=(a+b+c)/2,alan;
+		alan=Math.sqrt( cevre * (cevre - a) * (cevre - b) * (cevre - c ) );
+		System.out.println("Alan: " + alan);
 
 	}
 
