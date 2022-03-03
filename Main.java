@@ -1,44 +1,29 @@
-package taksimetreHesaplayanUygulama;
+package daireAlanHesapla;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		int r,merkezAci;
+		double pi=3.14;
 		
-		//Taksimetre Programý
-		//Java ile gidilen mesafeye (KM) göre taksimetre tutarýný ekrana yazdýran programý yazýn.
+		Scanner inp=new Scanner(System.in);
+		System.out.print("Yarýçapýný giriniz: ");
+		r=inp.nextInt();
+		System.out.print("Merkez açýyý giriniz: ");
+		merkezAci=inp.nextInt();
+		
+		double alan=(pi * (r*r) * merkezAci) / 360 ;
+		System.out.println("Alan: " + alan);
+		
+		
+		//normal alan ve çevre hesaplama
+		
+		//double normalalan=(pi * r * r);
+		//double normalcevre=(2* pi* r) ;
+		//System.out.println("normal Alan: " + normalalan);
+		//System.out.println("normal çevre: " + normalcevre);
 
-		//Taksimetre KM baþýna 2.20 TL tutmaktadýr.
-		//Minimum ödenecek tutar 20 TL'dir. 20 TL altýnda ki ücretlerde yine 20 TL alýnacaktýr.
-		//Taksimetre açýlýþ ücreti 10 TL'dir.  
-		
-		int km;
-		double perkm=2.20, total, startPrice=10;
-		
-		Scanner input=new Scanner(System.in);
-		System.out.print("Gideceðiniz yolu km cinsinden yazýnýz: ");
-		km=input.nextInt();
-		total=startPrice+ (perkm*km);
-		
-		//Totali aþaðýdaki gibi bir yöntem ile de yapabilirsniz. Bana mevcut kullandýðým code daha pratik geliyor. :)
-		//total= (perkm*km);
-		//total+=startPrice;
-		total=(km<=10)?20:total;
-		System.out.print("Ücretiniz: " + total);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 
 	}
 
