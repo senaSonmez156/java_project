@@ -1,24 +1,44 @@
-package ucgenAlan;
+package taksimetreHesaplayanUygulama;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		int a,b,c;
+		
+		//Taksimetre Programý
+		//Java ile gidilen mesafeye (KM) göre taksimetre tutarýný ekrana yazdýran programý yazýn.
+
+		//Taksimetre KM baþýna 2.20 TL tutmaktadýr.
+		//Minimum ödenecek tutar 20 TL'dir. 20 TL altýnda ki ücretlerde yine 20 TL alýnacaktýr.
+		//Taksimetre açýlýþ ücreti 10 TL'dir.  
+		
+		int km;
+		double perkm=2.20, total, startPrice=10;
+		
 		Scanner input=new Scanner(System.in);
+		System.out.print("Gideceðiniz yolu km cinsinden yazýnýz: ");
+		km=input.nextInt();
+		total=startPrice+ (perkm*km);
 		
-		System.out.print("1.Kenarý giriniz: " );
-		a=input.nextInt();
+		//Totali aþaðýdaki gibi bir yöntem ile de yapabilirsniz. Bana mevcut kullandýðým code daha pratik geliyor. :)
+		//total= (perkm*km);
+		//total+=startPrice;
+		total=(km<=10)?20:total;
+		System.out.print("Ücretiniz: " + total);
 		
 		
-		System.out.print("2.Kenarý giriniz: " );
-		b=input.nextInt();
 		
-		System.out.print("3.Kenarý giriniz: " );
-		c=input.nextInt();
 		
-		double cevre=(a+b+c)/2,alan;
-		alan=Math.sqrt( cevre * (cevre - a) * (cevre - b) * (cevre - c ) );
-		System.out.println("Alan: " + alan);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 	}
 
