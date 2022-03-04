@@ -1,28 +1,60 @@
-package etkinlikOnerme;
+package sýralama;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-	int heat;
-	Scanner input =new Scanner(System.in);
-	System.out.print("Bir hava sýcaklýðý giriniz: ");
-	heat=input.nextInt();
+		
+		int a,b,c;
+		Scanner input=new Scanner(System.in);
+		System.out.print("1.sayý: ");
+		a=input.nextInt();
+		System.out.print("2.sayý: ");
+		b=input.nextInt();
+		System.out.print("3.sayý: ");
+		c=input.nextInt();
+		
+		if((a<b) && (a<c)) {
+			if(b<c) {
+				System.out.print("a < b < c");
+			}
+			else
+			{
+				System.out.print("a < c < b");
+				}
+			}
+		else if((b<a) && (b<c)) {
+			if(a<c) {
+				System.out.print("b<a<c");
+			}
+			else {
+				System.out.print("b<c<a");
+			}
+			
+		}
 	
-	if(heat<5) {
-		System.out.print("Hava da epey soðukmuþ. Kayak yapabilirsiniz. :)");
-	}
-	else if(heat<=25) {
-		if(heat<=15) {
-			System.out.print("Duyduðuma göre vizyonda yeni filmler gelmiþ. Sinemaya gitmeye ne dersin? ");
+		
+		
+		
+		else {
+			if((a<b)) {
+				System.out.print("c<a<b");
+			}
+			else {
+				System.out.print("c<b<a");
+			}
 		}
 		
-		if(heat>=10) {
-			System.out.print("Bence lezzetli atýþtýrmalýklarýný hazýrla ve hemen pikniðe git! :)");
-		}
-		else {
-			System.out.print("Ne bekliyorsun? Hadi yüzmeye gidelim");
-		}
-	}
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
 
 	}
 
