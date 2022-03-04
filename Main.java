@@ -1,31 +1,70 @@
-package manav;
+package hesapMakinesi;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		double armut=2.14, elma=3.67, domates=1.11, muz=0.95, patlýcan=5.00;
-		double armutKg, elmaKg,muzKg,patlýcanKg, domatesKg;
+		int a,b,select;
+		
 		Scanner input=new Scanner(System.in);
-		System.out.print("Hoþgeldiniz :)");
-		System.out.print("armut kaç kilo? ");
-		armutKg= input.nextDouble();
-		System.out.print("Elma kaç kilo? ");
-		elmaKg=input.nextDouble();
-		System.out.print("Domates kaç kilo? ");
-		domatesKg=input.nextDouble();
-		System.out.print("Muz kaç kilo? ");
-		muzKg=input.nextDouble();
-		System.out.print("Patlýcan kaç kilo? ");
-		patlýcanKg=input.nextDouble();
+		System.out.print("Input the first number please: ");
+		a=input.nextInt();
+		System.out.print("Input the second number please: ");
+		b=input.nextInt();
+		
+		System.out.print("please select transaction\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division");
+		select=input.nextInt();
+		
+		switch(select) {
+		case 1:
+			System.out.print("Result: " + (a+b));
+			break;
+		case 2:
+			System.out.print("Result: " + (a-b));
+			break;
+		case 3:
+			System.out.print("Result: " + (a*b));
+			break;
+		case 4:
+			if(b!=0) {
+			System.out.print("Result: " + (a/b));
+			}
+			else {
+				System.out.print("Upss! Error: divisor cannot be zero");
+			}
+			break;
+			
+		default:{
+			System.out.print("you entered an invalid number");
+
+		}	
+			
+			
+		}
 		
 		
-		double toplam= (armut*armutKg)+(elma*elmaKg)+(patlýcan*patlýcanKg)+(domates*domatesKg)+(muz*muzKg);
-		System.out.println("Toplam tutarýnýz: "+ toplam);
 		
 		
 		
 		
 		
+		
+		
+		
+		
+		
+			
+			
+			
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		
 
 	}
