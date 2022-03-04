@@ -1,56 +1,37 @@
-package userLogin;
+package avarange;
 import java.util.Scanner;
-
-
 public class Main {
 
 	public static void main(String[] args) {
-		String u="senaSonmez", p="345461";
-		Scanner input=new Scanner(System.in);
-		System.out.print("User name: ");
-		String userName=input.nextLine();
-		System.out.print("Password: ");
-		String password=input.nextLine();
-		
-		if(userName.equals(u)&& password.equals(p)) {
-			System.out.print("Giriþ baþarýlý, sisteme yönlendiriliyorsunuz...");
-		} else if(!userName.equals(u)&& password.equals(p)) {
-			System.out.print("Kullanýcý ismi hatalý!");}
-		
-			else if (userName.equals(u)&& !password.equals(p)) {
-				System.out.print("Þifre hatalý!, Þifrenizi sýfýrlamak ister misiniz? Evet(e)/ Hayýr(h)");}
-			String reply=input.nextLine();
-			if(reply.equals("h")) {
-				System.out.print("Þifre deðiþtirilmedi, Giriþ yap.");
-			}
-			else if(reply.equals("e")){
-			System.out.print("Yeni þifre: ");}
-			else {System.out.print("Geçersiz komut");}
-			String newPassword=input.nextLine();
-			if(newPassword.equals(p)) {
-				System.out.print("Giriþ baþarýlý, sisteme yönlendiriliyorsunuz...");
-			}
-			else {
-				System.out.print("Þifre hatalý");
-			}
-	
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-
-		
+	double mat,fizik,türkce,kimya;
+	Scanner input=new Scanner(System.in);
+	System.out.print("Matematik notunuz: ");
+    mat=input.nextDouble();
+    System.out.print("Fizik notunuz: ");
+    fizik=input.nextDouble();
+    System.out.print("Türkçe notunuz: ");
+    türkce=input.nextDouble();
+    System.out.print("Kimya notunuz: ");
+    kimya=input.nextDouble();
+    
+    double avarange=(mat+fizik+türkce+kimya)/4;
+    
+    
+    if(avarange<=50) {
+    	System.out.print("Üzgünüz. Sýnýfý geçemediniz. seneye görüþürüz. :(");
+    }
+    else if(avarange>=50 && avarange<=100) {
+    	System.out.print("Tebrikler. Sýnýfý geçtiniz. Ýyi tatiller. :)");
+    }
+    else {
+    	System.out.print("Girdiðiniz bilgilerde hata var. Kontrol ediniz.");
+    }
+    
+    
+    
+    
+    
+    
 
 	}
 
