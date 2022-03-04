@@ -1,70 +1,55 @@
-package hesapMakinesi;
+package userLogin;
 import java.util.Scanner;
+
+
 public class Main {
 
 	public static void main(String[] args) {
-		int a,b,select;
-		
+		String u="senaSonmez", p="345461";
 		Scanner input=new Scanner(System.in);
-		System.out.print("Input the first number please: ");
-		a=input.nextInt();
-		System.out.print("Input the second number please: ");
-		b=input.nextInt();
+		System.out.print("User name: ");
+		String userName=input.nextLine();
+		System.out.print("Password: ");
+		String password=input.nextLine();
 		
-		System.out.print("please select transaction\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division");
-		select=input.nextInt();
+		if(userName.equals(u)&& password.equals(p)) {
+			System.out.print("Giriþ baþarýlý, sisteme yönlendiriliyorsunuz...");
+		} else if(!userName.equals(u)&& password.equals(p)) {
+			System.out.print("Kullanýcý ismi hatalý!");}
 		
-		switch(select) {
-		case 1:
-			System.out.print("Result: " + (a+b));
-			break;
-		case 2:
-			System.out.print("Result: " + (a-b));
-			break;
-		case 3:
-			System.out.print("Result: " + (a*b));
-			break;
-		case 4:
-			if(b!=0) {
-			System.out.print("Result: " + (a/b));
+			else if (userName.equals(u)&& !password.equals(p)) {
+				System.out.print("Þifre hatalý!, Þifrenizi sýfýrlamak ister misiniz? Evet(e)/ Hayýr(h)");}
+			String reply=input.nextLine();
+			if(reply.equals("h")) {
+				System.out.print("Þifre deðiþtirilmedi, Giriþ yap.");
+			}
+			else if(reply.equals("e")){
+			System.out.print("Yeni þifre: ");}
+			else {System.out.print("Geçersiz komut");}
+			String newPassword=input.nextLine();
+			if(newPassword.equals(p)) {
+				System.out.print("Giriþ baþarýlý, sisteme yönlendiriliyorsunuz...");
 			}
 			else {
-				System.out.print("Upss! Error: divisor cannot be zero");
+				System.out.print("Þifre hatalý");
 			}
-			break;
+	
 			
-		default:{
-			System.out.print("you entered an invalid number");
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 
-		}	
-			
-			
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-			
-			
-			
-		
-			
-			
-			
-			
-			
-			
-			
-			
-			
 		
 
 	}
