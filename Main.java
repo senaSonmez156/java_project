@@ -1,46 +1,23 @@
-package dongulerOrnek1;
+package dongulerOdev2;
 import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
-		Scanner input=new Scanner(System.in);
-		System.out.print("Sayýyý giriniz: ");
-		int sayi=input.nextInt();
+		Scanner scan=new Scanner(System.in);
+		int total=0;
+		int n;
 		
-		int toplam=0;
-		int n=0;
-				
-		for(int i=0; i<sayi; i++) {
-			
-			if((i%3==0) && (i%4==0)) {
-				System.out.println("Bölünen sayýlar: " + i);
-				toplam=toplam+n;
-				n++;
-				
+		do {
+			System.out.print("Sayý giriniz: ");
+			n=scan.nextInt();
+			if(n%2==0 && n%4==0) {
+				total += n;
 			}
 		}
-		
-		System.out.print("Toplam: " + toplam + "\nAdet: " +n);
-		int ortalama=toplam/n;
+while(n>0);
+System.out.print("Toplam: " + total);
 
-		System.out.print("\nOrtalama: " + ortalama);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
 	}
 
 }
