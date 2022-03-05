@@ -1,60 +1,30 @@
-package sýralama;
+package leapYear;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		int a,b,c;
+		int year;
 		Scanner input=new Scanner(System.in);
-		System.out.print("1.sayý: ");
-		a=input.nextInt();
-		System.out.print("2.sayý: ");
-		b=input.nextInt();
-		System.out.print("3.sayý: ");
-		c=input.nextInt();
+		System.out.print("Yýlý giriniz: ");
+		year=input.nextInt();
 		
-		if((a<b) && (a<c)) {
-			if(b<c) {
-				System.out.print("a < b < c");
-			}
-			else
-			{
-				System.out.print("a < c < b");
-				}
-			}
-		else if((b<a) && (b<c)) {
-			if(a<c) {
-				System.out.print("b<a<c");
-			}
-			else {
-				System.out.print("b<c<a");
-			}
-			
+		
+		if(year%4==0) {
+			System.out.print(year +" artýk bir yýldýr.");
+		}
+		else if(year%400==0) {
+			System.out.print(year +" artýk bir yýldýr.");
+		}
+		else if(year%400==0 && year%100==0) {
+			System.out.print(year +" artýk bir yýldýr.");
+		}
+		else if(year%100==0 && year%400!=0) {
+			System.out.print(year +" artýk bir yýl deðildir.");
+		}
+		else {
+			System.out.print(year +" artýk bir yýl deðildir.");
 		}
 	
-		
-		
-		
-		else {
-			if((a<b)) {
-				System.out.print("c<a<b");
-			}
-			else {
-				System.out.print("c<b<a");
-			}
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-			
-		
-		
 
 	}
 
