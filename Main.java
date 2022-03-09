@@ -1,22 +1,23 @@
-package dongulerOdev2;
+package dongulerKuvvet;
 import java.util.Scanner;
-
 public class Main {
 
 	public static void main(String[] args) {
+		int k;
 		Scanner scan=new Scanner(System.in);
-		int total=0;
-		int n;
-		
-		do {
-			System.out.print("Sayý giriniz: ");
-			n=scan.nextInt();
-			if(n%2==0 && n%4==0) {
-				total += n;
-			}
+		System.out.print("Üst sýnýr sayýsý giriniz: ");
+		k=scan.nextInt();
+		for(int i=1; i<=k; i*=4) {
+			System.out.println("(4'ün kuvvetleri)");
+			System.out.println(i+ ",");
+			
 		}
-while(n>0);
-System.out.print("Toplam: " + total);
+		for(int i=1; i<=k; i*=5) {
+			System.out.println("(5'in kuvvetleri)");
+			System.out.print(i+",");
+			
+		}
+		
 
 	}
 
