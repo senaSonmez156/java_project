@@ -1,22 +1,48 @@
-package dongulerKuvvet;
+package faktoriyel;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		int k;
+		int r,n;
 		Scanner scan=new Scanner(System.in);
-		System.out.print("Üst sýnýr sayýsý giriniz: ");
-		k=scan.nextInt();
-		for(int i=1; i<=k; i*=4) {
-			System.out.println("(4'ün kuvvetleri)");
-			System.out.println(i+ ",");
+		System.out.print("c(n,r)kombinasyonu için: ");
+		System.out.print("n sayýsýný giriniz: " );
+		n=scan.nextInt();
+		System.out.print("r sayýsýný giriniz: " );
+		r=scan.nextInt();
+		
+		int totaln=1, totalr=1, totalneksir=1;
+		
+		for(int i=1; i<=n; i++) {
+			totaln=totaln*i;
 			
 		}
-		for(int i=1; i<=k; i*=5) {
-			System.out.println("(5'in kuvvetleri)");
-			System.out.print(i+",");
-			
+		System.out.print("n!:" + totaln);
+		
+		
+		for(int j=1; j<=r; j++ ) {
+			totalr=totalr*j;
 		}
+		System.out.print("r!:" + totalr);
+		
+		  System.out.println("r!= "+totalr);
+	        for(int k=1;k<=(n-r);k++){
+	            totalneksir=totalneksir*k;
+	        }
+	        System.out.println("(n-r)!= "+totalneksir);
+	        double sonuc=totaln/(totalr*(totalneksir));
+	        System.out.println(sonuc);
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 
 	}
