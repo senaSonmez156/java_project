@@ -1,22 +1,23 @@
-package palindromNumbers;
-
+package metotlarUsluSayilar;
+import java.util.Scanner;
 public class Main {
-	static boolean isPalindrom(int number) {
-		int temp=number,lastNumber, reverceNumber=0;
-		while(temp!=0) {
-			lastNumber=temp%10;
-			reverceNumber=(reverceNumber*10)+lastNumber;
-			temp /=10;
+	static int power(int x,int y) {
+		int result=1;
+		for(int i=1; i<=y; i++)
+		{
+			result *=x;
 		}
-		
-		if(number==reverceNumber)
-		return true;
-		else
-			return false;
+		return result;
 	}
 
 	public static void main(String[] args) {
-		System.out.println(isPalindrom(2002));
+	Scanner scan=new Scanner(System.in);
+	System.out.print("Sayıyı giriniz: ");
+	int a=scan.nextInt();
+	System.out.print("Üssü giriniz: ");
+	int b=scan.nextInt();
+	
+	System.out.println(power(a,b));
 
 	}
 
