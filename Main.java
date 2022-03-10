@@ -1,21 +1,22 @@
-package usluSayilar;
-import java.util.Scanner;
+package palindromNumbers;
+
 public class Main {
+	static boolean isPalindrom(int number) {
+		int temp=number,lastNumber, reverceNumber=0;
+		while(temp!=0) {
+			lastNumber=temp%10;
+			reverceNumber=(reverceNumber*10)+lastNumber;
+			temp /=10;
+		}
+		
+		if(number==reverceNumber)
+		return true;
+		else
+			return false;
+	}
 
 	public static void main(String[] args) {
-		Scanner scan=new Scanner(System.in);
-		int k,u;
-		System.out.print("Sayýyý girniz: ");
-		 k=scan.nextInt();
-		System.out.print("Üsü yazýnýz: ");
-		 u=scan.nextInt();
-		 int total=1;
-		 
-		 for(int i=1; i <= u ; i++) { 
-			 total*=k;
-		 }
-		
-		 System.out.print("Cevap: " + total);
+		System.out.println(isPalindrom(2002));
 
 	}
 
