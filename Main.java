@@ -1,22 +1,18 @@
-package basamakSayý;
+package harmonikSayilar;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-	Scanner scan=new Scanner(System.in);
-	System.out.print("Sayýyý giriniz: ");
+		Scanner scan=new Scanner(System.in);
+	System.out.print("sayý gir: ");
 	int number=scan.nextInt();
-	int basValue;
-	int total=0;
-	
-	while(number!=0)
-	{
-		basValue=number%10;
-		total+=basValue;
-		number/=10;
+	double result=0.0;
+	for(double i=1; i<=number; i++) {
+		result+=(1/i);
 	}
+		System.out.print(result);
+	
 
-	System.out.print(total);
 	}
 
 }
