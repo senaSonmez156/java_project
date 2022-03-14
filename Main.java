@@ -1,31 +1,21 @@
-package asalSayilar;
-
+package fibonocci;
+import java.util.Scanner;
 public class Main {
-	    
+
 	public static void main(String[] args) {
-		
-	for(int i=2; i<100; i++) {
-		boolean isPrime=true;
-		for(int j=2; j<i; j++)
-		{
-			if(i%j==0) {
-				isPrime=false;
-			}
-		}	
-		if(isPrime) {
-			System.out.print(i+" ");
-		}
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	}}
+		  Scanner tara = new Scanner(System.in);
+	        System.out.println("Lütfen bir deðer giriniz :");
+	        int adet=tara.nextInt();
+	        int deger1=0;
+	        int deger2=1;
+	        System.out.print(deger1+" "+deger2);
+	        for (int i=0;i<= adet;i++){
+	            int deger3=deger1+deger2;
+	            System.out.print(" "+deger3);
+	            deger1=deger2;
+	            deger2=deger3;
+	        }
+
+	}
+
+}
