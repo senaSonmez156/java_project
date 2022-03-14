@@ -1,18 +1,31 @@
-package harmonikSayilar;
-import java.util.Scanner;
+package asalSayilar;
+
 public class Main {
-
+	    
 	public static void main(String[] args) {
-		Scanner scan=new Scanner(System.in);
-	System.out.print("sayý gir: ");
-	int number=scan.nextInt();
-	double result=0.0;
-	for(double i=1; i<=number; i++) {
-		result+=(1/i);
-	}
-		System.out.print(result);
-	
-
-	}
-
-}
+		
+	for(int i=2; i<100; i++) {
+		boolean isPrime=true;
+		for(int j=2; j<i; j++)
+		{
+			if(i%j==0) {
+				isPrime=false;
+			}
+		}	
+		if(isPrime) {
+			System.out.print(i+" ");
+		}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}}
