@@ -1,23 +1,32 @@
-package tersUcgen;
+package bigSmall;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-	    int n;
-
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Lütfen bir sayý giriniz: ");
-        n = scan.nextInt();
-
-        for (int i = 1; i < n; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(" ");
-            }
-            for (int x = 1; x <= 2 * (n - i) - 1; x++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+		Scanner scan=new Scanner(System.in);
+		 int max = 0,min = 0;
+		 System.out.println("kaç adet sayý gireceksiniz: ");
+		 int number=scan.nextInt();
+	        
+	        int [] array = new int[number];
+	        
+	        for(int i = 0; i < number; i++)
+	        {
+	            System.out.print("Dizinin " + (i+1) + ". elemanýný giriniz: ");
+	            array[i] = scan.nextInt();
+	            if(i == 0) {
+	                max = array[i];
+	                min = array[i];
+	            }
+	            if(array[i] > max) {
+	                max = array[i];
+	            }
+	            if(array[i] < min) {
+	                min = array[i];
+	            }
+	        }
+	        System.out.println("Dizinin en büyük elemaný = " + max);
+	        System.out.println("Dizinin en kucuk elemaný = " + min);
 
 	}
 
