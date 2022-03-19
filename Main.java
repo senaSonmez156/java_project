@@ -1,33 +1,191 @@
-package bigSmall;
+package horoscopeFinderProgram;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		int month,day;
 		Scanner scan=new Scanner(System.in);
-		 int max = 0,min = 0;
-		 System.out.println("kaç adet sayý gireceksiniz: ");
-		 int number=scan.nextInt();
-	        
-	        int [] array = new int[number];
-	        
-	        for(int i = 0; i < number; i++)
-	        {
-	            System.out.print("Dizinin " + (i+1) + ". elemanýný giriniz: ");
-	            array[i] = scan.nextInt();
-	            if(i == 0) {
-	                max = array[i];
-	                min = array[i];
-	            }
-	            if(array[i] > max) {
-	                max = array[i];
-	            }
-	            if(array[i] < min) {
-	                min = array[i];
-	            }
-	        }
-	        System.out.println("Dizinin en büyük elemaný = " + max);
-	        System.out.println("Dizinin en kucuk elemaný = " + min);
+		System.out.println("Doðduðunuýz ayý giriniz: ");
+		month=scan.nextInt();
+		System.out.println("Doðduðunuz günü yazýnýz: ");
+		day=scan.nextInt();
+		
+		String horoscope="";
+		boolean isError=false;
+		
+		if(month==1) {
+		if(day>=1 && day<=31) {
+			if(day<21) {
+				horoscope="Oðlak";
+			}
+			else {
+				horoscope="Kova";
+			}
+			
+		}else {
+			isError=true;
+		}}
 
+		else if(month==2) {
+		if(day>=1 && day<=28) {
+			if(day<20) {
+				horoscope="Kova";
+			}
+			else {
+				horoscope="Balýk";
+			}
+			
+		}else {
+			isError=true;
+		}}
+		
+
+		else if(month==3) {
+		if(day>=1 && day<=31) {
+			if(day<21) {
+				horoscope="Balýk";
+			}
+			else {
+				horoscope="Koç";
+			}
+			
+		}else {
+			isError=true;
+		}}
+		
+
+		else if(month==4) {
+		if(day>=1 && day<=30) {
+			if(day<21) {
+				horoscope="Koç";
+			}
+			else {
+				horoscope="Boða";
+			}
+			
+		}else {
+			isError=true;
+		}}
+		
+
+		else if(month==5) {
+		if(day>=1 && day<=31) {
+			if(day<22) {
+				horoscope="Boða";
+			}
+			else {
+				horoscope="Ýkizler";
+			}
+			
+		}else {
+			isError=true;
+		}}
+		
+
+		else if(month==6) {
+		if(day>=1 && day<=30) {
+			if(day<23) {
+				horoscope="Ýkizler";
+			}
+			else {
+				horoscope="Yengeç";
+			}
+			
+		}else {
+			isError=true;
+		}}
+		
+
+		else if(month==7) {
+		if(day>=1 && day<=31) {
+			if(day<23) {
+				horoscope="Yengeç";
+			}
+			else {
+				horoscope="Aslan";
+			}
+			
+		}else {
+			isError=true;
+		}}
+		
+
+		else if(month==8) {
+		if(day>=1 && day<=31) {
+			if(day<23) {
+				horoscope="Aslan";
+			}
+			else {
+				horoscope="Baþak";
+			}
+			
+		}else {
+			isError=true;
+		}}
+		
+
+		else if(month==9) {
+		if(day>=1 && day<=30) {
+			if(day<23) {
+				horoscope="Baþak";
+			}
+			else {
+				horoscope="Terazi";
+			}
+			
+		}else {
+			isError=true;
+		}}
+		
+
+		else if(month==10) {
+		if(day>=1 && day<=31) {
+			if(day<23) {
+				horoscope="Terazi";
+			}
+			else {
+				horoscope="Akrep";
+			}
+			
+		}else {
+			isError=true;
+		}}
+
+		else if(month==11) {
+		if(day>=1 && day<=30) {
+			if(day<22) {
+				horoscope="Akrep";
+			}
+			else {
+				horoscope="Yay";
+			}
+			
+		}else {
+			isError=true;
+		}}
+		
+
+		else if(month==12) {
+		if(day>=1 && day<=31) {
+			if(day<22) {
+				horoscope="Yay";
+			}
+			else {
+				horoscope="Oðlak";
+			}
+			
+		}else {
+			isError=true;
+		}}
+
+		else {
+			isError=true;
+		}
+		
+
+		if(isError) {System.out.println("Hatalý bilgi girdiniz. Kontrol ediniz.");}
+		else {System.out.println("Burcunuz: " + horoscope );}
 	}
+	
 
 }
