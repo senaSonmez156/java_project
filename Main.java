@@ -1,32 +1,41 @@
-package dizibigsmall;
+package array1;
 import java.util.Scanner;
 import java.util.Arrays;
 public class Main {
 
 	public static void main(String[] args) {
-		int arrayDimension, arrayElement;
 		Scanner scan=new Scanner(System.in);
-		System.out.print("Dizinin boyutunu giriniz: ");
-		arrayDimension=scan.nextInt();
-		int[] array=new int[arrayDimension];
+		int[] array= {15,12, 788,1,-1,-778,2,0};
+		System.out.println("Sayýyý giriniz: ");
+		int number=scan.nextInt();
 		
-		
-		for(int i=0; i<arrayDimension; i++) {
-			System.out.println("Dizinin " + (i+1)+ ". elemanýný giriniz:  ");
-			arrayElement=scan.nextInt();
-			array[i]=arrayElement;
-		}
-
+		int min=number;
+		int max=number;
 		Arrays.sort(array);
+
+		System.out.println("Dizi: " + Arrays.toString(array));
+		Arrays.sort(array);
+		System.out.println("Girdiðiniz sayý: " + number);
 		
-		System.out.println("Elemanlarýn küçükten büyüðe sýralanýþý: " + Arrays.toString(array));
+		for(int i:array) {
+			if(i<number) {
+				min=i;
+			}
+			if(i>number) {
+				max=i;
+				break;
+			}
+		}
 		
 		
 		
 		
 		
+		System.out.println("\nMaksimum deðer:" + max);
+		System.out.println("Minimum deðer: " + min);
+
 		
-		
-		
-}
+
+	}
+
 }
